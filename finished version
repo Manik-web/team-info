@@ -1,0 +1,68 @@
+const team = {
+  _players:[{
+    firstName: 'Pablo',
+    lastNAme: 'Sanchez',
+    age: 18
+  },{
+    firtsName:'Steven',
+    lastName:'Gerrard',
+    age:35
+  },
+  {
+    firstName:'Mo',
+    lastName:'Salah',
+    age:'28'
+  }],
+  _games:[{
+    opponent: 'Spurs',
+    teamPoints: 2,
+    opponentPoints:2
+  },{
+    opponent:'Manchester City',
+    teamPoints:5,
+    opponentPoints:0
+   },{
+    opponent:'Manchester United',
+    teamPoints:3,
+    opponentPoints:1
+    }],
+
+    get players(){
+      return this._players;
+    },
+
+    get games(){
+      return this._games;
+    },
+
+    addPlayer (firstName,lastName,age){
+      let player ={
+        firstName: firstName,
+        lastName: lastName,
+        age: age
+      }
+      this._players.push(player);
+    },
+
+    addGame(opponent,teamPoints,opponentPoints){
+      let newGame = {
+        opponent:opponent,
+        teamPoints:teamPoints,
+        opponentPoints:opponentPoints
+      }
+      this._games.push(newGame);
+      }
+    
+};
+
+team.addPlayer('Steph','Curry', 28);
+team.addPlayer('Lisa', 'Leslie', 44);
+team.addPlayer('Bugs', 'Bunny', 76);
+
+
+team.addGame('Minnie',5,1);
+team.addGame('Sarah',1,4);
+team.addGame('Manik',3,3);
+
+//console.log(team.games);
+//console.log(team.players);
